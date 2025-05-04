@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class MainMenu : MonoBehaviour
-{
-  
+public class MainMenu : MonoBehaviour {
+
   public Player player;
   public ProgressReport progressReport;
 
-  void Start()
-  {
+  void Start() {
 
-    if (TryGetComponent<UIDocument>(out var uiDocument))
-    {
+    if (TryGetComponent<UIDocument>(out var uiDocument)) {
       // Get the root visual element
       VisualElement root = uiDocument.rootVisualElement;
 
