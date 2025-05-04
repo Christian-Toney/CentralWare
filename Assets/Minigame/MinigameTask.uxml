@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center;">
+        <ui:Label tabindex="-1" text="DO SOMETHING!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Task" style="font-size: 50px; color: rgb(255, 255, 255); -unity-text-align: upper-center; -unity-font-style: bold; scale: 2 2;" />
+    </ui:VisualElement>
+</ui:UXML>
