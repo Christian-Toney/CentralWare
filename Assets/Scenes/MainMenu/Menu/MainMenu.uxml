@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; background-color: rgb(0, 0, 0); align-items: center; justify-content: center;">
+        <ui:VisualElement style="flex-grow: 1; max-width: 1080px; width: 100%; justify-content: center;">
+            <ui:Label tabindex="-1" text="CentralWare" parse-escape-sequences="false" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); font-size: 36px;" />
+            <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayButton" style="font-size: 28px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;" />
+            <ui:Button text="Credits" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CreditsButton" style="font-size: 28px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;" />
+            <ui:Button text="Exit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ExitButton" style="font-size: 28px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
