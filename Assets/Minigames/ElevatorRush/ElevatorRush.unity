@@ -1095,6 +1095,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   task: Break ankles!
   isComplete: 0
+  player: {fileID: 0}
+  minigameTaskUIDocument: {fileID: 1576465710}
   dependantObjects:
   - {fileID: 753685815}
   - {fileID: 1273437520}
@@ -1251,6 +1253,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1896344750773143959, guid: 05ce017eeb29d8b419bde7b228f938ad, type: 3}
   m_PrefabInstance: {fileID: 8788550623700083164}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1576465710 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3942359838935707648, guid: 05ce017eeb29d8b419bde7b228f938ad, type: 3}
+  m_PrefabInstance: {fileID: 8788550623700083164}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1842058979
 GameObject:
   m_ObjectHideFlags: 0

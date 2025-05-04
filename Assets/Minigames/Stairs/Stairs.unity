@@ -623,6 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1928387627}
+  minigame: {fileID: 324756702}
 --- !u!1 &324756701
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,6 +655,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   task: Climb!
   isComplete: 0
+  player: {fileID: 0}
+  minigameTaskUIDocument: {fileID: 2035041742}
+  music: {fileID: 1540685882}
 --- !u!4 &324756703
 Transform:
   m_ObjectHideFlags: 0
@@ -668,6 +672,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2035041741}
+  - {fileID: 1540685883}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &542351557
@@ -1581,12 +1586,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540685881}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.38356, y: 18.271278, z: -35.09425}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -27.644375, y: 17.314034, z: -21.279047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 324756703}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1556579765
 GameObject:
@@ -1954,6 +1959,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1896344750773143959, guid: 05ce017eeb29d8b419bde7b228f938ad, type: 3}
   m_PrefabInstance: {fileID: 2035041740}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2035041742 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3942359838935707648, guid: 05ce017eeb29d8b419bde7b228f938ad, type: 3}
+  m_PrefabInstance: {fileID: 2035041740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2135884381
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,4 +2201,3 @@ SceneRoots:
   - {fileID: 324756703}
   - {fileID: 1556579769}
   - {fileID: 190265746}
-  - {fileID: 1540685883}

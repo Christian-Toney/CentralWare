@@ -10,6 +10,7 @@ public abstract class Minigame : MonoBehaviour {
   public string task;
   public bool isComplete = false;
   public Player player;
+  public UIDocument minigameTaskUIDocument;
   protected ProgressReport progressReport;
 
   protected void Start() {
@@ -19,8 +20,7 @@ public abstract class Minigame : MonoBehaviour {
       player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
       progressReport = GameObject.FindGameObjectWithTag("ProgressReport").GetComponent<ProgressReport>();
 
-      UIDocument minigameTask = transform.GetChild(0).GetComponent<UIDocument>();
-      VisualElement root = minigameTask.rootVisualElement;
+      VisualElement root = minigameTaskUIDocument.rootVisualElement;
       VisualElement taskLabel = root.Q<VisualElement>("Task");
       taskLabel.Q<Label>("Task").text = task;
       StartCoroutine(AnimateTask(taskLabel));
