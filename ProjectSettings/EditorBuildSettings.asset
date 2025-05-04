@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/ElevatorRush/ElevatorRush.unity
     guid: 328409899cf3a604ca3f22fc51f4332c
   - enabled: 1
-    path: Assets/Scenes/MasterHacker/MasterHacker.unity
+    path: Assets/Scenes/RotateObject/MasterHacker.unity
     guid: 4f3359c1f5981a649a74e8a51c20cee0
   m_configObjects: {}
