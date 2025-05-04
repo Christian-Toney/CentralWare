@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MasterHackerMinigame : Minigame
+public class StairsMinigame : Minigame
 {
 
   protected new void Start()
@@ -16,7 +16,8 @@ public class MasterHackerMinigame : Minigame
   protected override IEnumerator StartMinigame()
   {
     
-    yield return new WaitForSeconds(5 / player.speed);
+    Physics.gravity = new Vector3(0, -50f, 0) * player.speed;
+    yield return new WaitForSeconds(10 / player.speed);
     progressReport.MinigameEnded(this);
     
   }

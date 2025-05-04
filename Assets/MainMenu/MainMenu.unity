@@ -567,7 +567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameSceneNameList:
-  - ElevatorRush
+  - Stairs
 --- !u!1 &1488450884
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public abstract class Minigame : MonoBehaviour {
 
   public string task;
   public bool isComplete = false;
-  protected Player player;
+  public Player player;
   protected ProgressReport progressReport;
 
   protected void Start() {
