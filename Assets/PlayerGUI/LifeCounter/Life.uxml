@@ -1,0 +1,3 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="width: 163px; height: 70px; background-image: url(&quot;project://database/Assets/PlayerGUI/LifeCounter/CR.png?fileID=2800000&amp;guid=a253f58423a4c444b867c307d9845d50&amp;type=3#CR&quot;);" />
+</ui:UXML>

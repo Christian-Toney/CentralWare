@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/PlayerGUI/Timer/Timer.uss?fileID=7433441132597879392&amp;guid=a150f2f56b864cb48b8c9dfd7a634753&amp;type=3#Timer" />
+    <ui:VisualElement style="flex-direction: row; align-items: flex-end; flex-grow: 1;">
+        <ui:Label text="12:00 AM" display-tooltip-when-elided="true" name="timer" />
+    </ui:VisualElement>
+</ui:UXML>

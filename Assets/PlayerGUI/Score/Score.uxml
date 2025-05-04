@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/PlayerGUI/Score/Score.uss?fileID=7433441132597879392&amp;guid=fc950d457ae3506498a3a9baab13b1b4&amp;type=3#Score" />
+    <ui:VisualElement style="flex-direction: row; align-items: flex-start; flex-grow: 1; justify-content: flex-start;">
+        <ui:Label text="Score: 0" name="score" display-tooltip-when-elided="true" style="align-items: auto;" />
+    </ui:VisualElement>
+</ui:UXML>
