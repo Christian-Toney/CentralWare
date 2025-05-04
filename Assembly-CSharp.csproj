@@ -69,12 +69,15 @@
     <Compile Include="Assets\Minigames\Stairs\Scripts\StairsMinigame.cs" />
     <Compile Include="Assets\ProgressReport\ProgressReport.cs" />
     <Compile Include="Assets\MainMenu\Menu\MainMenu.cs" />
+    <Compile Include="Assets\Minigames\MissionStreet\CartoonCarFree\Prefabs\Car.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Minigames\MissionStreet\StickFigure\StickFigure.cs" />
     <Compile Include="Assets\Minigames\Stairs\Stairs\Stairs.cs" />
     <Compile Include="Assets\PlayerGUI\Timer\Timer.cs" />
     <Compile Include="Assets\Minigame\Minigame.cs" />
     <Compile Include="Assets\Minigames\ElevatorRush\Protagonist\Protagonist.cs" />
     <Compile Include="Assets\Minigames\Stairs\PlayerCube\PlayerCube.cs" />
+    <Compile Include="Assets\Minigames\MissionStreet\MissionStreetMinigame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -96,6 +99,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\PlayerGUI\Timer\Timer.uxml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\ProgressReport\GameOverScreen.uxml" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\PlayerGUI\LifeCounter\Life.uxml" />
     <None Include="Assets\PlayerGUI\LifeCounter\LifeCounter.uxml" />

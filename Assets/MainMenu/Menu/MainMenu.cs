@@ -5,10 +5,24 @@ using UnityEngine.UIElements;
 
 public class MainMenu : MonoBehaviour {
 
-  public Player player;
-  public ProgressReport progressReport;
+  public static Player player;
+  public static ProgressReport progressReport;
 
   void Start() {
+
+    Screen.SetResolution(1920, 1080, true);
+
+    if (progressReport == null) {
+
+      progressReport = GameObject.FindGameObjectWithTag("ProgressReport").GetComponent<ProgressReport>();
+    
+    }
+
+    if (player == null) {
+
+      player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+    }
 
     if (TryGetComponent<UIDocument>(out var uiDocument)) {
       // Get the root visual element
@@ -17,8 +31,10 @@ public class MainMenu : MonoBehaviour {
       // Find the button by name and add a click event listener
       Button startButton = root.Q<Button>("PlayButton");
       startButton.RegisterCallback<ClickEvent>(ev => {
-
-        progressReport.enabled = true;
+        
+        player.SetLifeCount(3);
+        player.SetScore(0);
+        progressReport.LoadRandomMinigame();
 
       });
 

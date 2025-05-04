@@ -19,12 +19,12 @@ public class PlayerCube : MonoBehaviour {
     if (Input.GetButton("Up") && canJump) {
 
       canJump = false;
-      rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+      rigidbody.AddForce(jumpForce * Vector3.up, ForceMode.Impulse);
 
     } else if (Input.GetButton("Down") && canPound) {
 
       canPound = false;
-      rigidbody.AddForce(Vector3.down * jumpForce / 1.5f, ForceMode.Impulse);
+      rigidbody.AddForce(jumpForce * Vector3.down, ForceMode.Impulse);
 
     } else if (Input.GetButton("Left")) {
 

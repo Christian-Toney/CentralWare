@@ -3,21 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
-public class ProgressReport : MonoBehaviour
-{
-
-  Player player;
-  public string[] minigameSceneNameList = {};
+public class ProgressReport : MonoBehaviour {
+  public string[] minigameSceneNameList = { };
   private static ProgressReport currentProgressReport;
+  public Player player;
+  public AudioSource fanfareSound;
+  public UIDocument gameOverDocument;
 
-  void Awake()
-  {
-    
+  void Awake() {
+
     // Keep the progress report across scenes and destroy any duplicate instances.
-    if (currentProgressReport != null) 
-    {
-      Destroy(gameObject);
+    if (currentProgressReport != null) {
+      Destroy(this);
       return;
     }
 
@@ -26,19 +25,7 @@ public class ProgressReport : MonoBehaviour
 
   }
 
-  void Start()
-  {
-
-    GameObject playerGameObject = GameObject.FindGameObjectWithTag("Player");
-    player = playerGameObject.GetComponent<Player>();
-    player.SetLifeCount(3);
-
-    LoadRandomMinigame();
-
-  }
-
-  public void MinigameEnded(Minigame minigame)
-  {
+  public void MinigameEnded(Minigame minigame) {
 
     if (!minigame.isComplete) {
 
@@ -51,8 +38,7 @@ public class ProgressReport : MonoBehaviour
 
   }
 
-  void LoadRandomMinigame()
-  {
+  public void LoadRandomMinigame() {
 
     if (player.GetLifeCount() > 0) {
 
@@ -62,10 +48,10 @@ public class ProgressReport : MonoBehaviour
 
       // Check if the player's speed should be increased.
       if (newScore % 5 == 0) {
-      
+
         player.speed += 0.5f;
         Debug.Log("Player's speed increased to: " + player.speed);
-      
+
       }
 
       // Choose a random minigame.
@@ -77,11 +63,69 @@ public class ProgressReport : MonoBehaviour
       // Load the scene.
       SceneManager.LoadScene(randomMinigameSceneName, LoadSceneMode.Single);
 
-    } else {
+    }
+    else {
 
       Debug.Log("Player has lost all of their lives. Ending the game...");
+      fanfareSound.Play();
+
+      // Load the game over screen.
+      StartCoroutine(LoadGameOverScreen());
 
     }
 
   }
+
+  IEnumerator LoadGameOverScreen() {
+
+    // Fade in the game over screen.
+    gameOverDocument.enabled = true;
+    VisualElement rootVisualElement = gameOverDocument.rootVisualElement;
+    VisualElement window = rootVisualElement.Q("Window");
+
+    float duration = 1.0f;
+    float elapsedTime = 0.0f;
+
+    while (elapsedTime < duration) {
+      elapsedTime += Time.deltaTime;
+      float t = Mathf.Clamp01(elapsedTime / duration);
+      window.style.opacity = t;
+      yield return null;
+    }
+
+    Label scoreLabel = rootVisualElement.Q<Label>("Score");
+    scoreLabel.text = $"Your final score: {player.GetScore()}";
+    Button mainMenuButton = rootVisualElement.Q<Button>("MainMenuButton");
+    mainMenuButton.RegisterCallback<ClickEvent>(OnMenuButtonClick);
+
+    VisualElement content = rootVisualElement.Q("Content");
+    elapsedTime = 0.0f;
+    duration = 0.5f;
+
+    while (elapsedTime < duration) {
+      elapsedTime += Time.deltaTime;
+      float t = Mathf.Clamp01(elapsedTime / duration);
+      content.style.opacity = t;
+      yield return null;
+    }
+
+  }
+
+  void OnMenuButtonClick(ClickEvent evt) {
+
+    VisualElement rootVisualElement = gameOverDocument.rootVisualElement;
+    VisualElement window = rootVisualElement.Q("Window");
+    Button mainMenuButton = rootVisualElement.Q<Button>("MainMenuButton");
+    mainMenuButton.UnregisterCallback<ClickEvent>(OnMenuButtonClick);
+
+    SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+    gameOverDocument.enabled = false;
+
+    VisualElement content = rootVisualElement.Q("Content");
+    content.style.opacity = 0.0f;
+    window.style.opacity = 0.0f;
+    fanfareSound.Stop();
+
+  }
+
 }

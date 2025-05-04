@@ -12,6 +12,8 @@ public abstract class Minigame : MonoBehaviour {
   public Player player;
   public UIDocument minigameTaskUIDocument;
   protected ProgressReport progressReport;
+  protected readonly DateTime startTime = DateTime.Now;
+  protected DateTime endTime;
 
   protected void Start() {
 

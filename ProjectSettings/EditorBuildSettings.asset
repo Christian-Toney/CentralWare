@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/MainMenu/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Minigames/RightOnTime/RightOnTime.unity
-    guid: 27535762618e6ea48a8a75a7658ff4b3
-  - enabled: 1
     path: Assets/Minigames/ElevatorRush/ElevatorRush.unity
     guid: 328409899cf3a604ca3f22fc51f4332c
   - enabled: 1
     path: Assets/Minigames/Stairs/Stairs.unity
     guid: 4f3359c1f5981a649a74e8a51c20cee0
+  - enabled: 1
+    path: Assets/Minigames/MissionStreet/MissionStreet.unity
+    guid: 1ed4345d6a1690f4cbccd4d5611591bd
   m_configObjects: {}

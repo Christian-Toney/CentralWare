@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour {
 
   private int score = 0;
   private int lifeCount = 0;
@@ -15,13 +14,11 @@ public class Player : MonoBehaviour
 
   private static Player currentPlayer;
 
-  void Awake()
-  {
+  void Awake() {
 
     // Keep an instance across scenes and destroy any duplicate instances.
-    if (currentPlayer != null) 
-    {
-      Destroy(gameObject);
+    if (currentPlayer != null) {
+      Destroy(this);
       return;
     }
 
@@ -30,13 +27,11 @@ public class Player : MonoBehaviour
 
   }
 
-  public int GetScore()
-  {
+  public int GetScore() {
     return score;
   }
 
-  public void SetScore(int newScore)
-  {
+  public void SetScore(int newScore) {
 
     score = newScore;
 
@@ -47,22 +42,19 @@ public class Player : MonoBehaviour
 
   }
 
-  public int GetLifeCount()
-  {
+  public int GetLifeCount() {
     return lifeCount;
   }
 
-  public void SetLifeCount(int newLifeCount)
-  {
+  public void SetLifeCount(int newLifeCount) {
 
     lifeCount = newLifeCount;
 
     VisualElement root = lifeContainerDocument.rootVisualElement;
     VisualElement lifeContainer = root.Q<VisualElement>("LifeContainer");
     lifeContainer.Clear();
-    for (int i = 0; lifeCount > i; i++)
-    {
-      
+    for (int i = 0; lifeCount > i; i++) {
+
       lifeContainer.Add(lifeTemplateDocument.CloneTree());
 
     }

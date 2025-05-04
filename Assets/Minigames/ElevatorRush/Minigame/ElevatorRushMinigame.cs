@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class ElevatorRushMinigame : Minigame
 {
-  private readonly DateTime startTime = DateTime.Now;
-  private DateTime endTime;
   public GameObject[] dependantObjects;
 
   protected new void Start()
